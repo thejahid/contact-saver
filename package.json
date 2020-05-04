@@ -1,0 +1,19 @@
+{
+    "name": "contact-saver",
+    "version": "1.0.0",
+    "description": "A contact saver app using node, express, react, mongodb.",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "author": "developerjahid.com",
+    "license": "ISC",
+    "dependencies": {
+        "config": "^3.3.1",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.11"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
