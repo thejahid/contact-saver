@@ -10,7 +10,12 @@ app.use(express.json({ extended: false }))
 connectDB()
 
 //Define Routes
-app.use('/routes/api', require('./routes/api/auth'))
+//registration / user routes
+app.use('/routes/api/users', require('./routes/api/users'))
+//auth routes
+app.use('/routes/api/auth', require('./routes/api/auth'))
+//contact routes
+app.use('/routes/api/contacts', require('./routes/api/contacts'))
 
 const PORT = process.env.PORT || 5000
 

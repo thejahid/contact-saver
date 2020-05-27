@@ -1,31 +1,33 @@
 const router = require('express').Router()
+const { check } = require('express-validator')
 
-//route     GET /contacts
-//@desc     Get all conatcts
-//access    Private
-router.get('/', (req, res) => {
-    res.send('Get all contacts')
-})
+//Custom middileware protected routes
+const auth = require('../../middleware/auth')
 
-//route     POST /contacts
-//@desc     Add new contact
-//access    Private
-router.post('/', (req, res) => {
-    res.send('Add new contact')
-})
+//Call controllers
+const {
+    getContactController,
+    postContactController,
+    putContactController,
+    deleteContactController,
+} = require('../../controllers/contacts')
 
-//route     PUT /contacts
-//@desc     Update contact
-//access    Private
-router.put('/:id', (req, res) => {
-    res.send('Update contact')
-})
+//Get all contacts routes
+router.get('/', auth, getContactController)
 
-//route     DELETE /contacts
-//@desc     Delete contact
-//access    Private
-router.delete('/:id', (req, res) => {
-    res.send('Delete contact')
-})
+//Create new contact
+router.post(
+    '/',
+    [
+        auth,
+        //Express validator check
+        [check('name', 'Name is required.').not().isEmpty()],
+    ],
+    postContactController
+)
+
+router.put('/:id', putContactController)
+
+router.delete('/:id', deleteContactController)
 
 module.exports = router

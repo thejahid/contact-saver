@@ -1,0 +1,41 @@
+.mg-top {
+    margin-top: 56px;
+}
+.navbar {
+    background: #ff9800;
+    padding: 0.3rem 1rem;
+}
+.navbar-brand {
+    color: white;
+}
+.signup {
+    min-width: 450px;
+    margin-top: 50px;
+}
+.login {
+    min-width: 450px;
+    margin-top: 50px;
+}
+.masthead {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.1) 0,
+            rgba(255, 255, 255, 0.1) 100%
+        ),
+        url(../images/contact-saver-back.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a.btn.btn-info,
+a.btn.btn-warning {
+    padding: 0 9px;
+    margin: 5px;
+    font-size: 14px;
+}

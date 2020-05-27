@@ -59,12 +59,5 @@ exports.signupPostController = async (req, res) => {
     }
 }
 
-//Signup & auto login/payload at /signup
-exports.signupGetController = async (req, res) => {}
-
 //Login post controller at /login
-exports.loginPostController = async (req, res) => {}
-
-exports.loginGetController = async (req, res) => {}
-
-exports.logoutController = (req, res, next) => {}
+exports.signupGetController = async (req, res) => {}
