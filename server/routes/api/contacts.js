@@ -26,8 +26,10 @@ router.post(
     postContactController
 )
 
-router.put('/:id', putContactController)
+//Update contact
+router.put('/:id', auth, putContactController)
 
-router.delete('/:id', deleteContactController)
+//Delete contact
+router.delete('/:id', auth, deleteContactController)
 
 module.exports = router
