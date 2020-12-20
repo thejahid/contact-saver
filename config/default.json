@@ -1,4 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://developerjahid:oLgHBR8kbcn1wKvo@developerjahid-nwlf4.mongodb.net/contact-saver?retryWrites=true&w=majority",
-    "jwtSecret": "myjwtsecretoken"
-}
