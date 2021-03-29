@@ -7,6 +7,7 @@ import light from "styles/themes/light";
 import dark from "styles/themes/dark";
 import usePersistedState from "utils/usePersistedState";
 import { Layout, Home } from "components";
+import ContactState from "context/contact/ContactState";
 
 const App = () => {
   //changing theme
@@ -18,16 +19,18 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Layout toggleTheme={toggleTheme}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </Layout>
-      </ThemeProvider>
-    </Router>
+    <ContactState>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Layout toggleTheme={toggleTheme}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+          </Layout>
+        </ThemeProvider>
+      </Router>
+    </ContactState>
   );
 };
 
